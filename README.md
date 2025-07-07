@@ -59,6 +59,29 @@ my-portfolio/
 - Add pages/components under `(website)` and `(studio)` as needed.
 - Follow `.cursor-rules.json` for codebase conventions and best practices.
 
+## Bootstrap Grid Customization
+
+This project uses a minimal, customized Bootstrap grid for layout, rather than the full Bootstrap framework.
+
+### How it works
+- By default, only the grid system and selected utility classes (flex, margin, padding) are included.
+- All unnecessary Bootstrap SCSS files and components have been removed for performance and maintainability.
+- You can override Bootstrap grid variables (like breakpoints) before importing the grid.
+
+### Customizing Breakpoints
+To customize the grid breakpoints, edit `src/styles/_breakpoints.module.scss`:
+
+```scss
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px,
+  xxxl: 1800px
+);
+```
 ---
 
 **Built by Billy Myles-Berkouwer**
