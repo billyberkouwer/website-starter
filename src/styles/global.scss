@@ -1,5 +1,21 @@
-@use './_helpers.scss' as *;
-@use './_fonts.scss' as *;
-@use './_mixins.scss' as *;
-@use './_variables.module.scss' as *;
-@use './_media-queries.scss' as *;
+@use 'helpers' as *;
+
+@use "../../node_modules/bootstrap/scss/bootstrap-grid" with (
+  $grid-breakpoints: $grid-breakpoints
+);
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $white;
+}
+
+@include media-breakpoint(xxxl) {
+    body {
+        background-color: $white;        
+    }
+}

@@ -1,5 +1,6 @@
-@use "./_breakpoints.module.scss" as *;
-@use "./_media-queries.scss" as *;
-@use "./_colors.module.scss" as *;
-@use "./_variables.module.scss" as *;
-@use "./mixins.scss" as *;
+@forward "mixins";
+@forward "media-queries";
+@forward "fonts";
+@forward "./_breakpoints.module.scss";
+@forward "./_colors.module.scss";
+@forward "./_variables.module.scss";

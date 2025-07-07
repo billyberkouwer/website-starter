@@ -1,5 +1,3 @@
-
-
 @mixin unstyle-button {
     background-color: transparent;
     border-width: 0;
@@ -10,42 +8,4 @@
     line-height: inherit;
     padding: 0;
     cursor: pointer;
-}
-
-@mixin backdrop-blur {
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.01);
-}
-
-@mixin grid-columns {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-
-@mixin border-bottom {
-    border-bottom: 0.5px solid var(--foreground);
-}
-
-@mixin mondwest {
-    font-family: '__Mondwest_e431c9', '__Mondwest_Fallback_e431c9';
-}
-
-@mixin section-height-100 {
-    height: calc(75vh - 2em);
-    height: calc(75dvh - 2em);
-
-    @include md {
-        height: calc(100vh - 4em);
-        height: calc(100vh - 4em);
-    }
-}
-
-@mixin section-header {
-    height: calc(75dvh - 1em - 100px);
-    height: calc(75vh - 1em - 100px);
-
-    @include md {
-        height: calc(100vh - 2em - 100px);
-        height: calc(100dvh - 2em - 100px);
-    }
 }
