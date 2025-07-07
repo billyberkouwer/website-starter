@@ -16,6 +16,7 @@ This is my opinionated starter for building content-rich websites with **Next.js
 - **SCSS Modules**: Component-scoped styles, BEM naming, and utility classes.
 - **Accessibility & Modern JS**: Semantic HTML, a11y best practices, and modern language features.
 - **API Routes**: For live editing, revalidation, and custom endpoints under `src/app/(studio)/api`.
+- **Bootstrap Grid**: For column layouts, a customizeable version of bootstrap grid is included.
 
 ## Getting Started
 
