@@ -27,11 +27,13 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     presentationTool({
       previewUrl: {
-        origin: process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
-        draftMode: {
+        initial: process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_URL || "http://localhost:3000",
+        previewMode: {
           enable: '/api/draft',
+          disable: '/api/draft/disable',
         },
       },
+      allowOrigins: ['http://localhost:*', `${process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_URL}`],
     }),
   ],
 })
