@@ -14,6 +14,13 @@ import { apiVersion, dataset, projectId } from './src/sanity/env'
 import { schema } from './src/sanity/schemaTypes'
 import { structure } from './src/sanity/structure'
 
+const allowOrigins = ['http://localhost:*'];
+
+
+if (process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_URL) {
+  allowOrigins.push(process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_URL);
+}
+
 export default defineConfig({
   basePath: '/admin',
   projectId,
@@ -27,13 +34,13 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     presentationTool({
       previewUrl: {
-        initial: process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_URL || "http://localhost:3000",
+        initial: process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_URL ?? "http://localhost:3000",
         previewMode: {
           enable: '/api/draft',
           disable: '/api/draft/disable',
         },
       },
-      allowOrigins: ['http://localhost:*', `${process.env.NEXT_PUBLIC_SANITY_STUDIO_PREVIEW_URL}`],
+      allowOrigins: allowOrigins,
     }),
   ],
 })
